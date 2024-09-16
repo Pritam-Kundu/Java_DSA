@@ -3,7 +3,7 @@
 public class BinarySearch{
     public static void main(String args[]){
         int arr[] = {-1,0,2,3,4,5,6,87};
-        int target =8;
+        int target =87;
         int index = binarySearch(arr, target);
         System.out.println(index);
         
@@ -17,9 +17,9 @@ public class BinarySearch{
           int mid = (start+end)/2; //Most Important 2
   
           if(target < arr[mid]){
-            end = arr[mid]-1;
+            end = mid-1;
           }else if(target > arr[mid]){
-            start = arr[mid]+1;
+            start = mid+1;
           }else{
             return mid;
           }
