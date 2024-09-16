@@ -17,9 +17,9 @@ public class BinarySearch{
           int mid = (start+end)/2; //Most Important 2
   
           if(target < arr[mid]){
-            end = mid-1;
+            end = mid-1;               //If the array was in descending order then this will go in 'else-if' statement
           }else if(target > arr[mid]){
-            start = mid+1;
+            start = mid+1;             //If the array was in descending order then this will go in 'if' statement
           }else{
             return mid;
           }
