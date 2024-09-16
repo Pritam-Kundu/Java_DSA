@@ -5,7 +5,7 @@ public class BinarySearch{
         int arr[] = {-1,0,2,3,4,5,6,87};
         int target =87;
         int index = binarySearch(arr, target);
-        System.out.println(index);
+        System.out.println("Index of "+target+" is: "+index);
         
     }
     public static int binarySearch(int arr[],int target){
