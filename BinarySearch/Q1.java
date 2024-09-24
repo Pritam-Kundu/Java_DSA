@@ -16,12 +16,13 @@
 public class Q1{
     public static void main(String args[]){
         int arr[] = {2,3,5,7,9,14,16,67,87};
-        int target = 20;
+        int target = 90;
         int result = BinarySearch(arr, target);
-        System.out.println("Ceiling value of "+target+" is: "+result);
+        System.out.println("Ceiling value of "+target+" is: "+arr[result]);
     }
 
     public static int BinarySearch(int arr[],int target){
+        
         int start = 0;
         int end = arr.length - 1;
         int mid = 0;
@@ -33,17 +34,17 @@ public class Q1{
             }else if(arr[mid] < target){
                 start = mid + 1;
             }else{
-                return arr[mid];
+                return mid;
             }
         }
  
-        return arr[start];
+        return start;
     }
 }
 
 /*
- * Basically we are checking whether the loop breaking condition is met or not...means if we are searching for the "target" element and we have not found that, in that case "start > end" because otherwise the loop will not break and the start element will be the ceiling of the given number
+ * Basically we are checking whether the loop breaking condition is met or not...means if we are searching for the "target" element and we have not found that, in that case "start > end" because otherwise the loop will not break and the "start" element will be the ceiling of the given number
  * 
- * Instead of returning "-1" we have to return "arr[start]" after ending of the while loop
- * & in the loop we will return "arr[mid]" instead of "[mid]"(index of the "target")
+ * Instead of returning "-1" we have to return "start" after ending of the while loop
+ * & in the loop we will return "mid" 
  */
